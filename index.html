@@ -46,7 +46,8 @@
   Thanks for completing the form. We'll be in touch soon! -->
 
     <div id="success-message" class="success-message hidden">
-      Message Sent! Thanks for completing this form, we'll be in touch soon.
+      <span>Message Sent!</span>
+      <p>Thanks for completing this form, we'll be in touch soon.</p>
     </div>
 
     <div class="container">
@@ -74,11 +75,11 @@
         <div class="input-box">
           <label>Query Type *</label>
           <div class="radio-group">
-            <label
+            <label class="radio-group-label"
               ><input type="radio" name="query" value="general" /> General
               Enquiry</label
             >
-            <label
+            <label class="radio-group-label"
               ><input type="radio" name="query" value="support" /> Support
               Request</label
             >
@@ -92,11 +93,13 @@
           <span class="error-message"></span>
         </div>
 
-        <div class="input-box checkbox">
-          <input type="checkbox" id="consent" />
-          <label for="consent"
-            >I consent to being contacted by the team *</label
-          >
+        <div>
+          <div class="checkbox">
+            <input type="checkbox" id="consent" />
+            <label for="consent"
+              >I consent to being contacted by the team *</label
+            >
+          </div>
           <span class="error-message"></span>
         </div>
 

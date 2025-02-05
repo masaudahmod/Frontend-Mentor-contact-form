@@ -23,6 +23,9 @@ document
       if (field.value.trim() === "") {
         field.nextElementSibling.innerText = "This field is required.";
         isValid = false;
+        field.style.border = "1px solid red";
+      }else{
+        field.style.border = "1px solid #004f44";
       }
     });
 
@@ -32,18 +35,18 @@ document
       isValid = false;
     }
 
-    // Validate Radio Buttons
     if (!queryType) {
-      document.querySelector(
-        "input[name='query']"
-      ).parentNode.nextElementSibling.innerText = "Please select a query type.";
+      document.querySelector(".radio-group").nextElementSibling.innerText =
+        "Please select a query type.";
       isValid = false;
     }
 
-    // Validate Checkbox
     if (!consent.checked) {
-      consent.nextElementSibling.innerText = "You must agree to be contacted.";
-      isValid = false;
+      
+      document
+        .querySelector("#consent")
+        .closest(".checkbox").nextElementSibling.innerText =
+        "You must agree to be contacted.";
     }
 
     // Show Success Message
